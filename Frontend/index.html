@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerWay</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    
+</head>
+<body id="main-body">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="trending-toggle">
+            <button class="btn btn-primary" id="trending-btn">Trending</button>
+        </div>
+        <div class="trending-section" id="trending-section">
+            <h5>Trending</h5>
+            <a href="#" class="trending-item">SSC CGL Updates</a><br>
+            <a href="#" class="trending-item">NEET Tips</a><br>
+            <a href="#" class="trending-item">JEE Advanced Insights</a><br>
+            <a href="#" class="trending-item">UPSC Preparation</a>
+        </div>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link categories-link" href="#">Categories</a>
+                    <div class="categories-dropdown">
+                        <div class="category">Engineering</div>
+                        <div class="category">Medical</div>
+                        <div class="category">Law</div>
+                        <div class="category">Management</div>
+                        <div class="category">Defense</div>
+                        <div class="category"> Goverment Jobs</div>
+                        <div class="category">Competitive Exams</div>
+                        <div class="category">Architecture</div>
+                        <div class="category">Others</div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"  id="abt"href="#">About</a>
+            
+                </li>
+            </ul>
+        </div>
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Logo" style="height: 40px;">
+        </a>
+    </nav>
+
+    <!-- Field Section -->
+    <div class="field-container">
+        <div class="field-title" id="field-title">Engineering</div>
+        <div class="options-container">
+            <div class="option-box" id="exams-box">
+                <h5>Exams</h5>
+                <ul>
+                    <li>JEE Main</li>
+                    <li>JEE Advanced</li>
+                    <li>GATE</li>
+                    <li>State CETs</li>
+                </ul>
+            </div>
+            <div class="option-box" id="courses-box">
+                <h5>Courses</h5>
+                <ul>
+                    <li>B.Tech</li>
+                    <li>M.Tech</li>
+                    <li>Diploma</li>
+                    <li>PhD</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="centered-search">
+        <div class="search-bar-container">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                <g>
+                    <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                </g>
+            </svg>
+            <input placeholder="Search for exams, courses, or resources..." type="search" class="input search-bar">
+        </div>
+    </div>
+
+    <!-- Details Card Placeholder -->
+    <div class="details-card">
+        <button class="close-btn">&times;</button>
+        <h2 id="details-title"></h2>
+        <div class="section" id="syllabus-section">
+            <h3>Syllabus</h3>
+            <ul id="syllabus-list"></ul>
+        </div>
+        <div class="section" id="roadmap-section">
+            <h3>Roadmap</h3>
+            <ul id="roadmap-list"></ul>
+        </div>
+        <div class="section" id="books-section">
+            <h3>Books and Resources</h3>
+            <ul id="books-list"></ul>
+        </div>
+        <div class="section" id="videos-section">
+            <h3>Videos</h3>
+            <ul id="videos-list"></ul>
+        </div>
+        <div class="section" id="links-section">
+            <h3>Important Links</h3>
+            <ul id="links-list"></ul>
+        </div>
+        <div class="section" id="colleges-section">
+            <h3>Colleges</h3>
+            <ul id="colleges-list"></ul>
+        </div>
+    </div>
+
+    <!-- Chatbot Icon -->
+    <button class="chatbot-icon">
+        💬
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const fieldTitle = document.getElementById('field-title');
+            const searchSection = document.querySelector('.centered-search');
+
+            // Example animation on field selection
+            setTimeout(() => {
+                fieldTitle.style.animation = "fadeIn 1s ease-in-out forwards";
+                searchSection.style.marginTop = "50px"; // Adjust search bar position
+            }, 300);
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

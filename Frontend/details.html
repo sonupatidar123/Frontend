@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="details.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+<body id="main body">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <div class="trending-toggle">
+            <button class="btn btn-primary" id="trending-btn">Trending</button>
+        </div>
+        <div class="trending-section" id="trending-section">
+            <h5>Trending</h5>
+            <a href="#" class="trending-item">SSC CGL Updates</a><br>
+            <a href="#" class="trending-item">NEET Tips</a><br>
+            <a href="#" class="trending-item">JEE Advanced Insights</a><br>
+            <a href="#" class="trending-item">UPSC Preparation</a>
+        </div>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link categories-link" href="#">Categories</a>
+                    <div class="categories-dropdown">
+                        <div class="category">Engineering</div>
+                        <div class="category">Medical</div>
+                        <div class="category">Law</div>
+                        <div class="category">Management</div>
+                        <div class="category">Defense</div>
+                        <div class="category"> Goverment Jobs</div>
+                        <div class="category">Competitive Exams</div>
+                        <div class="category">Architecture</div>
+                        <div class="category">Others</div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+        </div>
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Logo" style="height: 40px;">
+        </a>
+    </nav>
+
+    <div class="trending-section" id="trending-section">
+        <h5>Trending</h5>
+        <a href="#" class="trending-item">SSC CGL Updates</a><br>
+        <a href="#" class="trending-item">NEET Tips</a><br>
+        <a href="#" class="trending-item">JEE Advanced Insights</a><br>
+        <a href="#" class="trending-item">UPSC Preparation</a>
+    </div>
+
+    <div class="selected-option" id="selected-option"></div>
+
+    <div class="details-container">
+        <h1 id="details-title"></h1>
+        <div class="section" id="syllabus-section">
+            <h3>Syllabus</h3>
+        </div>
+        <div class="section" id="roadmap-section">
+            <h3>Roadmap</h3>
+        </div>
+        <div class="section" id="books-section">
+            <h3>Books and Resources</h3>
+        </div>
+        <div class="section" id="videos-section">
+            <h3>Videos</h3>
+        </div>
+        <div class="section" id="links-section">
+            <h3>Important Links</h3>
+        </div>
+        <div class="section" id="colleges-section">
+            <h3>Colleges</h3>
+        </div>
+    </div>
+    <div class="field-container">
+        <div class="field-title" id="field-title">Engineering</div>
+        <div class="options-container">
+            <div class="option-box" id="exams-box">
+                <h5>Exams</h5>
+                <ul>
+                    
+                </ul>
+            </div>
+            <div class="option-box" id="courses-box">
+                <h5>Courses</h5>
+                <ul>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const fieldTitle = document.getElementById('field-title');
+            const searchSection = document.querySelector('.centered-search');
+
+            // Example animation on field selection
+            setTimeout(() => {
+                fieldTitle.style.animation = "fadeIn 1s ease-in-out forwards";
+                searchSection.style.marginTop = "50px"; // Adjust search bar position
+            }, 300);
+        });
+    </script>
+    <script src="details.js"></script>
+</body>
+</html>
